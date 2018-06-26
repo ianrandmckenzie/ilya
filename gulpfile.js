@@ -49,7 +49,7 @@ gulp.task('serve', () => {
 
 gulp.task('icons', function() { 
   return gulp.src('./node_modules/font-awesome/fonts/**.*') 
-    .pipe(gulp.dest('docs/fonts')); 
+    .pipe(gulp.dest(paths.docs.fonts)); 
 });
 
 gulp.task('styles', () => {
@@ -92,19 +92,19 @@ gulp.task('templates', () => {
 });
 
 gulp.task('jquery', function(){
-  return gulp.src('./node_modules/jquery/docs/jquery.min.js') 
-    .pipe(gulp.dest('docs/js/libs')); 
+  return gulp.src('node_modules/jquery/dist/jquery.min.js') 
+    .pipe(gulp.dest(paths.docs.libs)); 
 });
 
-gulp.task('popper', function(){
-  return gulp.src('./node_modules/popper.js/docs/popper.min.js') 
-    .pipe(gulp.dest('docs/js/libs')); 
+gulp.task('popper.js', function(){
+  return gulp.src('node_modules/popper.js/dist/popper.min.js') 
+    .pipe(gulp.dest(paths.docs.libs)); 
 });
 
 
 gulp.task('bootstrap-js', function(){
-  return gulp.src('./node_modules/bootstrap/docs/js/bootstrap.min.js') 
-    .pipe(gulp.dest('docs/js/libs')); 
+  return gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js') 
+    .pipe(gulp.dest(paths.docs.libs)); 
 });
 
 /*
@@ -165,4 +165,4 @@ gulp.task('deploy', () => {
     .pipe(ghPages());
 });
 
-gulp.task('default', ['watch', 'serve', 'images', 'files', 'styles', 'scripts', 'templates', 'icons', 'jquery', 'popper', 'bootstrap-js']);
+gulp.task('default', ['watch', 'serve', 'images', 'files', 'styles', 'scripts', 'templates', 'icons', 'jquery', 'popper.js', 'bootstrap-js']);
