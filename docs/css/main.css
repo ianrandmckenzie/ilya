@@ -9070,23 +9070,13 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 0;
   padding: 0; }
 
-::-moz-selection {
-  background: #302D2F;
-  color: #FFFFFF; }
-
-::selection {
-  background: #302D2F;
-  color: #FFFFFF; }
-
 html,
 body {
   width: 100%;
   height: 100%; }
 
 body {
-  font: 16px/1.35 Work Sans, San Francisco, sans-serif;
-  color: #302D2F;
-  background: #FFFFFF; }
+  font: font(default); }
 
 a {
   color: inherit;
@@ -9102,28 +9092,28 @@ a {
 h1,
 h2,
 h3 {
-  font-weight: 500 !important; }
+  font-weight: 2rem !important; }
 
 h1 {
-  font: 3rem/1.2 Work Sans, San Francisco, sans-serif; }
+  font: font(large); }
 
 h2 {
-  font: 3rem/1.2 Work Sans, San Francisco, sans-serif; }
+  font: font(large); }
 
 h3 {
-  font: 2.2rem/1.2 Work Sans, San Francisco, sans-serif; }
+  font: font(x-medium); }
 
 @media (min-width: 750px) {
   h1 {
-    font: 5rem/1.0 Work Sans, San Francisco, sans-serif; } }
+    font: font(x-large); } }
 
 @media (min-width: 1000px) {
   h1 {
-    font: 8rem/1.05 Work Sans, San Francisco, sans-serif; }
+    font: font(xx-large); }
   h2 {
-    font: 5rem/1.0 Work Sans, San Francisco, sans-serif; }
+    font: font(x-large); }
   h3 {
-    font: 3rem/1.2 Work Sans, San Francisco, sans-serif; } }
+    font: font(large); } }
 
 .container {
   margin-top: 25vh; }
